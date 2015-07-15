@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>
+            startScreen
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="msapplication-tap-highlight" content="no">
+        <link href="files/resources/lib/theme/jqm/jqm.css" rel="stylesheet" />
+        <link href="files/resources/lib/theme/ios71434985262115/ios71434985262115.css" rel="stylesheet"
+        />
+        <link href="files/resources/lib/jquerymobile/1.4.4/jquery.mobile.structure-1.4.4.css"
+        rel="stylesheet" />
+        <script type="text/javascript" src="files/resources/lib/underscore/underscore.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/store/json2.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/jquery/jquery-2.1.1.js">
+        </script>
+        <script type="text/javascript">
+                    $(document).bind("mobileinit", function()
+            {
+                if (navigator.userAgent.toLowerCase().indexOf("android") != -1)
+                {
+                    $.mobile.defaultPageTransition = 'none';
+                    $.mobile.defaultDialogTransition = 'none';
+                }
+                else if (navigator.userAgent.toLowerCase().indexOf("msie") != -1)
+                {
+                    $.mobile.allowCrossDomainPages = true;
+                    $.support.cors = true;
+                }
+            });
+        </script>
+        <script type="text/javascript" src="files/resources/lib/jquerymobile/1.4.4/jquery.mobile-1.4.4.js">
+        </script>
+        <script type="text/javascript" src="files/resources/js/mobilebase.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/event/customEventHandler.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/sha1.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/oauth.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/contexts.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/jquery.xml2json.min.js">
+        </script>
+        <script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=true">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/jquery-ui-map/jquery.ui.map.full.min.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/appery.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/component-manager.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/mapping-impl.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/entity-api.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/storage-api.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/get_target_platform.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/cordova.js">
+        </script>
+        <link href="files/resources/css/mobilebase.css" rel="stylesheet" type="text/css"
+        />
+        <script type="text/javascript" src="files/views/assets/js/services/model.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/Salesforce_utils.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/GoogleMapsJS.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/getAuth.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/ETA.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/login.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/services/service.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/databaseUtils.js">
+        </script>
+        <link href="startScreen.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="startScreen.js">
+        </script>
+    </head>
+    
+    <body>
+        <script language="JavaScript" type="text/javascript">
+                
+        </script>
+        <div data-role="page" style="min-height:768px;" dsid="startScreen" id="startScreen"
+        class="type-interior" data-theme="h">
+            <!-- mobilecontainer -->
+            <div data-role="content" id="startScreen_mobilecontainer" name="mobilecontainer"
+            class="startScreen_mobilecontainer ui-content" dsid="mobilecontainer" data-theme="h">
+                <!-- mobilegrid_2 -->
+                <div class="startScreen_mobilegrid_2_wrapper" data-wrapper-for="mobilegrid_2">
+                    <table id="startScreen_mobilegrid_2" class="startScreen_mobilegrid_2" dsid="mobilegrid_2"
+                    name="mobilegrid_2" cellpadding=0 cellspacing=0>
+                        <col style="width:auto;" />
+                        <col style="width:404px;" />
+                        <col style="width:auto;" />
+                        <tr class="startScreen_mobilegrid_2_row_0">
+                            <!-- mobilegridcell_3 -->
+                            <td id="startScreen_mobilegridcell_3" name="mobilegridcell_3" class="startScreen_mobilegridcell_3"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- backbutton --><!--
+                                    --><a data-role="button" name="backbutton" dsid="backbutton" class="startScreen_backbutton"
+                                    id="startScreen_backbutton" data-corners="true" data-icon="carat-l" data-iconpos="left"
+                                    x-apple-data-detectors="false" data-inline="true" data-mini="true" data-theme="h"
+                                    tabindex="11">
+                                    Back
+                                    </a><!--
+                                    --><!-- showbutton --><!--
+                                    --><a data-role="button" name="showbutton" dsid="showbutton" class="startScreen_showbutton"
+                                    id="startScreen_showbutton" data-corners="true" data-icon="none" data-iconpos='nowhere'
+                                    x-apple-data-detectors="false" data-mini="false" data-theme="h" tabindex="3">
+                                    get key for testing
+                                    </a><!--
+                                    --><!-- output -->
+                                    <div name="output" id="startScreen_output" dsid="output" data-role="appery_label"
+                                    class="startScreen_output">
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_4 -->
+                            <td id="startScreen_mobilegridcell_4" name="mobilegridcell_4" class="startScreen_mobilegridcell_4"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobileimage_22 -->
+                                    <img class="startScreen_mobileimage_22" src="files/views/assets/image/SuncrestLogo_1435887291.png"
+                                    id="startScreen_mobileimage_22" dsid="mobileimage_22" name="mobileimage_22" />
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_7 -->
+                            <td id="startScreen_mobilegridcell_7" name="mobilegridcell_7" class="startScreen_mobilegridcell_7"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="startScreen_mobilegrid_2_row_1">
+                            <!-- mobilegridcell_5 -->
+                            <td id="startScreen_mobilegridcell_5" name="mobilegridcell_5" class="startScreen_mobilegridcell_5"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_6 -->
+                            <td id="startScreen_mobilegridcell_6" name="mobilegridcell_6" class="startScreen_mobilegridcell_6"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- prompt -->
+                                    <div name="prompt" id="startScreen_prompt" dsid="prompt" data-role="appery_label"
+                                    class="input  startScreen_prompt">
+                                        Enter customer's first or last name:
+                                    </div>
+                                    <!-- labelname -->
+                                    <div name="labelname" id="startScreen_labelname" dsid="labelname" data-role="appery_label"
+                                    class="startScreen_labelname">
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_8 -->
+                            <td id="startScreen_mobilegridcell_8" name="mobilegridcell_8" class="startScreen_mobilegridcell_8"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="startScreen_mobilegrid_2_row_2">
+                            <!-- mobilegridcell_9 -->
+                            <td id="startScreen_mobilegridcell_9" name="mobilegridcell_9" class="startScreen_mobilegridcell_9"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- array_result_list -->
+                                    <ul data-role="listview" id="startScreen_array_result_list" class="startScreen_array_result_list"
+                                    name="array_result_list" dsid="array_result_list" data-inset="true" data-theme="h"
+                                    data-divider-theme="b" data-count-theme="b" style="" data-split-icon="carat-r">
+                                        <!-- array_result_list_item -->
+                                        <li class="startScreen_array_result_list_item" data-icon="carat-r">
+                                            <a id="startScreen_array_result_list_item" name="array_result_list_item" dsid="array_result_list_item"
+                                            tabindex="12" class="startScreen_array_result_list_item">
+                                            <h3></h3>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_10 -->
+                            <td id="startScreen_mobilegridcell_10" name="mobilegridcell_10" class="startScreen_mobilegridcell_10"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- labelstreet -->
+                                    <div name="labelstreet" id="startScreen_labelstreet" dsid="labelstreet" data-role="appery_label"
+                                    class="startScreen_labelstreet">
+                                    </div>
+                                    <!-- labelcity -->
+                                    <div name="labelcity" id="startScreen_labelcity" dsid="labelcity" data-role="appery_label"
+                                    class="startScreen_labelcity">
+                                    </div>
+                                    <!-- labelzip -->
+                                    <div name="labelzip" id="startScreen_labelzip" dsid="labelzip" data-role="appery_label"
+                                    class="startScreen_labelzip">
+                                    </div>
+                                    <!-- labelphone -->
+                                    <div name="labelphone" id="startScreen_labelphone" dsid="labelphone" data-role="appery_label"
+                                    class="startScreen_labelphone">
+                                    </div>
+                                    <!-- Input -->
+                                    <div data-role="fieldcontain" class="startScreen_Input ">
+                                        <input type="text" name="Input" dsid="Input" value="" placeholder="" id="startScreen_Input"
+                                        tabindex="1" multiple data-theme="f" data-mini="false" class="input  startScreen_Input"
+                                        />
+                                    </div>
+                                    <!-- custom_message_input -->
+                                    <div data-role="fieldcontain" class="startScreen_custom_message_input ">
+                                        <input type="text" name="custom_message_input" dsid="custom_message_input" value=""
+                                        placeholder="enter custom message:" id="startScreen_custom_message_input" tabindex="10"
+                                        multiple data-theme="a" class="startScreen_custom_message_input" />
+                                    </div>
+                                    <!-- result_list -->
+                                    <ul data-role="listview" id="startScreen_result_list" class="startScreen_result_list"
+                                    name="result_list" dsid="result_list" data-inset="true" data-theme="h" data-divider-theme="g"
+                                    data-count-theme="g" style="" data-split-icon="carat-r">
+                                        <!-- mobilelistitem_45 -->
+                                        <li class="startScreen_mobilelistitem_45" data-icon="carat-r">
+                                            <a id="startScreen_mobilelistitem_45" name="mobilelistitem_45" dsid="mobilelistitem_45"
+                                            tabindex="4" class="startScreen_mobilelistitem_45">
+                                            <h3></h3>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_11 -->
+                            <td id="startScreen_mobilegridcell_11" name="mobilegridcell_11" class="startScreen_mobilegridcell_11"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="startScreen_mobilegrid_2_row_3">
+                            <!-- mobilegridcell_12 -->
+                            <td id="startScreen_mobilegridcell_12" name="mobilegridcell_12" class="startScreen_mobilegridcell_12"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_13 -->
+                            <td id="startScreen_mobilegridcell_13" name="mobilegridcell_13" class="startScreen_mobilegridcell_13"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <div data-role="fieldcontain" class="startScreen_optionscheckbox" id="startScreen_optionscheckbox"
+                                    dsid="optionscheckbox">
+                                        <fieldset data-role="controlgroup" data-theme="f" class="">
+                                            <span dsid="sendcustommessagecheck" class="startScreen_sendcustommessagecheck" name="sendcustommessagecheck">
+                                                <input type="checkbox" name="optionscheckbox" id="startScreen_sendcustommessagecheck"
+                                                checked="checked" tabindex="5" value="startScreen_sendcustommessagecheck" />
+                                                <label id="startScreen_sendcustommessagecheck_label" for="startScreen_sendcustommessagecheck">
+                                                    Send Custom Message
+                                                </label>
+                                            </span>
+                                            <span dsid="sendetacheck" class="startScreen_sendetacheck" name="sendetacheck">
+                                                <input type="checkbox" name="optionscheckbox" id="startScreen_sendetacheck" checked="checked"
+                                                tabindex="5" value="startScreen_sendetacheck" />
+                                                <label id="startScreen_sendetacheck_label" for="startScreen_sendetacheck">
+                                                    Send ETA
+                                                </label>
+                                            </span>
+                                            <span dsid="navigatecheck" class="startScreen_navigatecheck" name="navigatecheck">
+                                                <input type="checkbox" name="optionscheckbox" id="startScreen_navigatecheck" checked="checked"
+                                                tabindex="5" value="Item 3" />
+                                                <label id="startScreen_navigatecheck_label" for="startScreen_navigatecheck">
+                                                    Navigate
+                                                </label>
+                                            </span>
+                                        </fieldset>
+                                    </div>
+                                    <!-- search_button --><!--
+                                    --><a data-role="button" name="search_button" dsid="search_button" class="search  startScreen_search_button"
+                                    id="startScreen_search_button" data-corners="true" data-icon="search" data-iconpos="left"
+                                    x-apple-data-detectors="false" data-mini="false" data-theme="h" tabindex="2">
+                                    Search...
+                                    </a><!--
+                                    --><!-- go --><!--
+                                    --><a data-role="button" name="go" dsid="go" class="startScreen_go" id="startScreen_go"
+                                    data-corners="true" data-icon="none" data-iconpos='nowhere' x-apple-data-detectors="false"
+                                    data-mini="false" data-theme="h" tabindex="9">
+                                    Go!!!
+                                    </a>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_14 -->
+                            <td id="startScreen_mobilegridcell_14" name="mobilegridcell_14" class="startScreen_mobilegridcell_14"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="startScreen_mobilegrid_2_row_4">
+                            <!-- mobilegridcell_15 -->
+                            <td id="startScreen_mobilegridcell_15" name="mobilegridcell_15" class="startScreen_mobilegridcell_15"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_16 -->
+                            <td id="startScreen_mobilegridcell_16" name="mobilegridcell_16" class="startScreen_mobilegridcell_16"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- sms_return_label -->
+                                    <div name="sms_return_label" id="startScreen_sms_return_label" dsid="sms_return_label"
+                                    data-role="appery_label" class="startScreen_sms_return_label">
+                                    </div>
+                                    <!-- eta_body_label -->
+                                    <div name="eta_body_label" id="startScreen_eta_body_label" dsid="eta_body_label"
+                                    data-role="appery_label" class="startScreen_eta_body_label">
+                                    </div>
+                                    <!-- message_sent_label -->
+                                    <div name="message_sent_label" id="startScreen_message_sent_label" dsid="message_sent_label"
+                                    data-role="appery_label" class="startScreen_message_sent_label">
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_17 -->
+                            <td id="startScreen_mobilegridcell_17" name="mobilegridcell_17" class="startScreen_mobilegridcell_17"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="startScreen_mobilegrid_2_row_5">
+                            <!-- mobilegridcell_19 -->
+                            <td id="startScreen_mobilegridcell_19" name="mobilegridcell_19" class="startScreen_mobilegridcell_19"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_20 -->
+                            <td id="startScreen_mobilegridcell_20" name="mobilegridcell_20" class="startScreen_mobilegridcell_20"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_21 -->
+                            <td id="startScreen_mobilegridcell_21" name="mobilegridcell_21" class="startScreen_mobilegridcell_21"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div data-role="page" style="min-height:768px;" dsid="navigate" id="navigate" class="type-interior"
+        data-theme="h">
+            <!-- mobilecontainer -->
+            <div data-role="content" id="navigate_mobilecontainer" name="mobilecontainer" class="navigate_mobilecontainer ui-content"
+            dsid="mobilecontainer" data-theme="h">
+                <!-- mobilegrid_22 -->
+                <div class="navigate_mobilegrid_22_wrapper" data-wrapper-for="mobilegrid_22">
+                    <table id="navigate_mobilegrid_22" class="navigate_mobilegrid_22" dsid="mobilegrid_22"
+                    name="mobilegrid_22" cellpadding=0 cellspacing=0>
+                        <col style="width:auto;" />
+                        <col style="width:auto;" />
+                        <col style="width:auto;" />
+                        <tr class="navigate_mobilegrid_22_row_0">
+                            <!-- mobilegridcell_23 -->
+                            <td id="navigate_mobilegridcell_23" name="mobilegridcell_23" class="navigate_mobilegridcell_23"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- back_button --><!--
+                                    --><a data-role="button" name="back_button" dsid="back_button" class="back  navigate_back_button"
+                                    id="navigate_back_button" data-corners="true" data-icon="carat-l" data-iconpos="left"
+                                    x-apple-data-detectors="false" data-inline="true" data-mini="true" data-theme="h"
+                                    tabindex="7">
+                                    Back
+                                    </a>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_24 -->
+                            <td id="navigate_mobilegridcell_24" name="mobilegridcell_24" class="navigate_mobilegridcell_24"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- smsoutput -->
+                                    <div name="smsoutput" id="navigate_smsoutput" dsid="smsoutput" data-role="appery_label"
+                                    class="navigate_smsoutput">
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_27 -->
+                            <td id="navigate_mobilegridcell_27" name="mobilegridcell_27" class="navigate_mobilegridcell_27"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- map -->
+                <div id="navigate_map" dsid="map" name="map" data-role="appery_googlemap" tiggzitype="object"
+                apperytype="object" class='map  navigate_map' style='width:100%;'>
+                    <img class='map  navigate_map' src="http://assets1.geocommons.com/d51ab1366bec6a2c4954db979e5921bd4cc140db/images/no_preview_map.png?1311276822"
+                    />
+                </div>
+                <ul data-role="listview" id="navigate_map_markers" name="map_markers" dsid="map_markers"
+                style="display:none">
+                    <!-- current_position -->
+                    <li id="navigate_current_position" name="current_position" dsid="current_position"
+                    tiggzitype="marker" apperytype="marker" rendered="true" latitude="" longitude=""
+                    text="Current Position" address="" show_info="true" style="display:none">
+                        <div id="navigate_current_position_infoWindow" name="current_position_infoWindowContent"
+                        class='navigate_current_position'>
+                        </div>
+                    </li>
+                </ul>
+                <!-- mobilegrid_6 -->
+                <div class="navigate_mobilegrid_6_wrapper" data-wrapper-for="mobilegrid_6">
+                    <table id="navigate_mobilegrid_6" class="navigate_mobilegrid_6" dsid="mobilegrid_6"
+                    name="mobilegrid_6" cellpadding=0 cellspacing=0>
+                        <col style="width:auto;" />
+                        <col style="width:auto;" />
+                        <col style="width:auto;" />
+                        <tr class="navigate_mobilegrid_6_row_0">
+                            <!-- mobilegridcell_7 -->
+                            <td id="navigate_mobilegridcell_7" name="mobilegridcell_7" class="navigate_mobilegridcell_7"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_8 -->
+                            <td id="navigate_mobilegridcell_8" name="mobilegridcell_8" class="navigate_mobilegridcell_8"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobilelabel_5 -->
+                                    <div name="mobilelabel_5" id="navigate_mobilelabel_5" dsid="mobilelabel_5" data-role="appery_label"
+                                    class="navigate_mobilelabel_5">
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_17 -->
+                            <td id="navigate_mobilegridcell_17" name="mobilegridcell_17" class="navigate_mobilegridcell_17"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="navigate_mobilegrid_6_row_1">
+                            <!-- mobilegridcell_9 -->
+                            <td id="navigate_mobilegridcell_9" name="mobilegridcell_9" class="navigate_mobilegridcell_9"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_10 -->
+                            <td id="navigate_mobilegridcell_10" name="mobilegridcell_10" class="navigate_mobilegridcell_10"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobilebutton_4 --><!--
+                                    --><a data-role="button" name="mobilebutton_4" dsid="mobilebutton_4" class="google_maps  navigate_mobilebutton_4"
+                                    id="navigate_mobilebutton_4" data-corners="true" data-icon="navigation" data-iconpos="left"
+                                    x-apple-data-detectors="false" data-mini="false" data-theme="h" tabindex="8">
+                                    Google Maps Voice Navigation ...     
+                                    </a><!--
+                                    --><!-- show_the_eta --><!--
+                                    --><a data-role="button" name="show_the_eta" dsid="show_the_eta" class="google_maps  navigate_show_the_eta"
+                                    id="navigate_show_the_eta" data-corners="true" data-icon="info" data-iconpos="left"
+                                    x-apple-data-detectors="false" data-mini="false" data-theme="h" tabindex="10">
+                                    Show ETA
+                                    </a>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_18 -->
+                            <td id="navigate_mobilegridcell_18" name="mobilegridcell_18" class="navigate_mobilegridcell_18"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="navigate_mobilegrid_6_row_2">
+                            <!-- mobilegridcell_11 -->
+                            <td id="navigate_mobilegridcell_11" name="mobilegridcell_11" class="navigate_mobilegridcell_11"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_12 -->
+                            <td id="navigate_mobilegridcell_12" name="mobilegridcell_12" class="navigate_mobilegridcell_12"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- eta_ouput -->
+                                    <div name="eta_ouput" id="navigate_eta_ouput" dsid="eta_ouput" data-role="appery_label"
+                                    class="navigate_eta_ouput">
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_19 -->
+                            <td id="navigate_mobilegridcell_19" name="mobilegridcell_19" class="navigate_mobilegridcell_19"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="navigate_mobilegrid_6_row_3">
+                            <!-- mobilegridcell_13 -->
+                            <td id="navigate_mobilegridcell_13" name="mobilegridcell_13" class="navigate_mobilegridcell_13"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_14 -->
+                            <td id="navigate_mobilegridcell_14" name="mobilegridcell_14" class="navigate_mobilegridcell_14"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_20 -->
+                            <td id="navigate_mobilegridcell_20" name="mobilegridcell_20" class="navigate_mobilegridcell_20"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="navigate_mobilegrid_6_row_4">
+                            <!-- mobilegridcell_15 -->
+                            <td id="navigate_mobilegridcell_15" name="mobilegridcell_15" class="navigate_mobilegridcell_15"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_16 -->
+                            <td id="navigate_mobilegridcell_16" name="mobilegridcell_16" class="navigate_mobilegridcell_16"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_21 -->
+                            <td id="navigate_mobilegridcell_21" name="mobilegridcell_21" class="navigate_mobilegridcell_21"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>
